@@ -14,8 +14,13 @@ assert btcTocad(1) == 45000
 (2 points) 
 """
 
-def btcTocad():
-    pass
+def btcTocad(amount):
+    currBTC = 45000
+    if isinstance(amount,(int,float)):
+        return amount * currBTC
+    else:
+        return 'error'
+    
 
 
 """
@@ -27,4 +32,4 @@ are not executed.
 if __name__ == "__main__":
     assert btcTocad(1) == 45000
     assert btcTocad(2.5) == 135000
-    assert btcTocad(one) == 'error'
+    assert btcTocad('one') == 'error'
